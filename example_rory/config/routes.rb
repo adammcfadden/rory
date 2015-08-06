@@ -1,11 +1,11 @@
 ExampleApp::Application.set_routes do
-  match 'post', to: 'post#index', methods: [:get]
+  match '/', to: 'post#index', methods: [:get]
 
   # match initializes an instance of the Route class.
   # this will set the controller and the action for that route
-  # ex: match 'post', to: 'foo#bar', methods: [:get]
-  # controller = foo
-  # action = bar
+  # ex: match '/posts', to: 'post#index', methods: [:get]
+  # controller = post
+  # action = index
 
   # view Route source code at /lib/rory/route.rb
 
