@@ -1,0 +1,108 @@
+[{
+  "identifier": "1",
+  "name": "ABC Company, LLC",
+  "contact": {
+    "phone": "444-333-2222",
+    "email": "boss@contractor.biz",
+    "address": {
+      "street1": "123 Main Street",
+      "street2": "",
+      "city": "Jungle",
+      "state": "CA",
+      "zipcode": "33445-3333"
+    }
+  },
+  "licensing_organization": "CSLB",
+  "license_number": "122345",
+  "listing_status": "active",
+  "employees": [ {
+    "name": "Matt Strait",
+    "status": "active",
+    "email": "matt@contractor.com",
+    "phone": "444-333-2221"
+  }]
+},
+{
+  "identifier": "2",
+  "name": "Joe Plumber, LLC",
+  "contact": {
+    "phone": "203-333-2222",
+    "email": "joe@plumber.com",
+    "address": {
+      "street1": "123 Plumber Road",
+      "street2": "",
+      "city": "Pipe",
+      "state": "CA",
+      "zipcode": "23445-3333"
+    }
+  },
+  "licensing_organization": "CSLB",
+  "license_number": "162385",
+  "listing_status": "active",
+  "employees": [ {
+    "name": "Joe Plumber",
+    "status": "active",
+    "email": "joe@plumber.com",
+    "phone": "444-333-2221"
+  }]
+},
+{
+  "identifier": "3",
+  "name": "Sally House Cleaning, LLC",
+  "contact": {
+    "phone": "203-333-2222",
+    "email": "sally@house.com",
+    "address": {
+      "street1": "123 House Street",
+      "street2": "",
+      "city": "Pipe",
+      "state": "CA",
+      "zipcode": "23445-3333"
+    }
+  },
+  "licensing_organization": "CSLB",
+  "license_number": "162416",
+  "listing_status": "active",
+  "employees": [
+    ]
+},
+{
+  "identifier": "4",
+  "name": "Apple Contractors, LLC",
+  "contact": {
+    "phone": "207-333-2222",
+    "email": "sam@appplecontractor.com",
+    "address": {
+      "street1": "123 Apple Road",
+      "street2": "",
+      "city": "Orange",
+      "state": "CA",
+      "zipcode": "23450-3330"
+    }
+  },
+  "licensing_organization": "CSLB",
+  "license_number": "162392",
+  "listing_status": "active",
+  "employees": [
+    ]
+},
+{
+  "identifier": "5",
+  "name": "Dallas County, LLC",
+  "contact": {
+    "phone": "211-333-2217",
+    "email": "unp@dallas.com",
+    "address": {
+      "street1": "126 Texas Road",
+      "street2": "",
+      "city": "Dallas",
+      "state": "TX",
+      "zipcode": "23460-3330"
+    }
+  },
+  "licensing_organization": "CSLB",
+  "license_number": "162392",
+  "listing_status": "active",
+  "employees": [
+  ]
+}]
