@@ -1,9 +1,9 @@
 require 'rory'
 
-#replace ExampleApp with App name
+# replace ExampleApp with desired App name
 
 module ExampleApp
-  #Application class inherits from the Rory namespace Application class
+  # Application class inherits from the Rory namespace Application class
   class Application < Rory::Application
   end
 end
@@ -11,9 +11,9 @@ end
 ExampleApp::Application.root = File.expand_path(File.join('..', '..'), __FILE__)
 ExampleApp::Application.require_all_files
 
-#view Rory::Application source code at /lib/rory/application.rb
+# view Rory::Application source code at /lib/rory/application.rb
 
-#Methods Available to the Rory::Application class
+# Methods Available to the Rory::Application class
     # inherited(subclass)
     # method_missing(*args, &block)
     # respond_to?(method)

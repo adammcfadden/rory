@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rory'
+gem 'thin'
 gem 'sequel'
 
 group :developtment, :test do
