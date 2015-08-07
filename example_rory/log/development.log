@@ -432,3 +432,11 @@ I, [2015-08-07T11:48:55.441483 #61193]  INFO -- : Started GET "/" for 127.0.0.1 
 I, [2015-08-07T11:48:55.441583 #61193]  INFO -- : Parameters: {}
 I, [2015-08-07T11:48:55.442635 #61193]  INFO -- : (0.000555s) SELECT * FROM "posts"
 127.0.0.1 - - [07/Aug/2015:11:48:55 -0700] "GET / HTTP/1.1" 200 - 0.0014
+I, [2015-08-07T13:41:50.157480 #61732]  INFO -- : (0.000357s) SET standard_conforming_strings = ON
+I, [2015-08-07T13:41:50.157790 #61732]  INFO -- : (0.000191s) SET client_min_messages = 'WARNING'
+I, [2015-08-07T13:41:50.158056 #61732]  INFO -- : (0.000199s) SET DateStyle = 'ISO'
+I, [2015-08-07T13:41:50.161918 #61732]  INFO -- : (0.002966s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"posts"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2015-08-07T13:42:45.821524 #61732]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 13:42:45 -0700
+I, [2015-08-07T13:42:45.821658 #61732]  INFO -- : Parameters: {}
+I, [2015-08-07T13:42:45.822574 #61732]  INFO -- : (0.000363s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:13:42:45 -0700] "GET /retrieve HTTP/1.1" 200 - 0.0017

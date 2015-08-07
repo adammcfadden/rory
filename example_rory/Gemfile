@@ -4,6 +4,7 @@ gem 'rory'
 gem 'thin'
 gem 'sequel'
 gem 'pg'
+# database_operations provides rake tasks
 gem 'database_operations', :git => 'git@github.com:projectdx/database_operations.git'
 
 

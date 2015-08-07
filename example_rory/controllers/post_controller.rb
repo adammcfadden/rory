@@ -6,32 +6,34 @@ class PostController < ApiController
   # define actions here, these actions will link to your route definitions.
   # def index within the post controller will map to 'post#index'
   def index
-
+    # by default the post/index.html.erb template will be rendered
   end
 
-  # to see api call
+  # to send api call
   # `curl -H "X-API-TOKEN:test-token" http://localhost:3000/retrieve`
   def retrieve
+    # set posts equal to all posts in database and convert to json
     posts = []
     Post.all.each do |post|
-      posts << {:name => post.name}.to_json
+      posts << {:id => post.id, :name => post.name}.to_json
     end
+    # set the @response to send the posts variable(which is json Content-Type)
     with_authorization do
       @response = [200, {'Content-Type' => 'application/json'}, [posts]]
     end
   end
 
   def new
-    # # render(options_or_template = nil, opts = {})
-    # render(options_or_template = new)
+    # by default the post/new.html.erb template will be rendered
   end
 
   def create
     Post.create(:name => params[:post_name])
+    # redirect allows you to send the user to a different path
     redirect '/'
   end
 
-# to see api call
+# to send api call
 # `curl -H "X-API-TOKEN:test-token" http://localhost:3000/retrieve_test_json`
   def retrieve_test_json
     with_authorization do
