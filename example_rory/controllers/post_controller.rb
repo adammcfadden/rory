@@ -15,11 +15,11 @@ class PostController < ApiController
     # set posts equal to all posts in database and convert to json
     posts = []
     Post.all.each do |post|
-      posts << {:id => post.id, :name => post.name}.to_json
+      posts << {:id => post.id, :name => post.name}
     end
     # set the @response to send the posts variable(which is json Content-Type)
     with_authorization do
-      @response = [200, {'Content-Type' => 'application/json'}, [posts]]
+      @response = [200, {'Content-Type' => 'application/json'}, [posts.to_json]]
     end
   end
 
