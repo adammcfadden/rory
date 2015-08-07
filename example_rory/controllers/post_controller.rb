@@ -9,8 +9,16 @@ class PostController < ApiController
 
   end
 
+  # to see api call
+  # `curl -H "X-API-TOKEN:test-token" http://localhost:3000/retrieve`
   def retrieve
-
+    posts = []
+    Post.all.each do |post|
+      posts << {:name => post.name}.to_json
+    end
+    with_authorization do
+      @response = [200, {'Content-Type' => 'application/json'}, [posts]]
+    end
   end
 
   def new
@@ -23,6 +31,8 @@ class PostController < ApiController
     redirect '/'
   end
 
+# to see api call
+# `curl -H "X-API-TOKEN:test-token" http://localhost:3000/retrieve_test_json`
   def retrieve_test_json
     with_authorization do
       # set contractors to equal a json file stored in the fixtures folder

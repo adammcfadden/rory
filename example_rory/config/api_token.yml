@@ -1,7 +1,7 @@
 default: &default
   # Add api token here
-  token: '020299-3240923-12e30fedf-324edf'
-  
+  token: 'test-token'
+
 test:
   <<: *default
 

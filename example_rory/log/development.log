@@ -213,3 +213,222 @@ I, [2015-08-07T11:26:20.220423 #60717]  INFO -- : Started GET "/" for 127.0.0.1 
 I, [2015-08-07T11:26:20.220540 #60717]  INFO -- : Parameters: {}
 I, [2015-08-07T11:26:20.221707 #60717]  INFO -- : (0.000633s) SELECT * FROM "posts"
 127.0.0.1 - - [07/Aug/2015:11:26:20 -0700] "GET / HTTP/1.1" 200 - 0.0015
+I, [2015-08-07T11:29:06.414045 #60717]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:29:06 -0700
+I, [2015-08-07T11:29:06.414147 #60717]  INFO -- : Parameters: {}
+I, [2015-08-07T11:29:06.415266 #60717]  INFO -- : (0.000637s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:29:06 -0700] "GET / HTTP/1.1" 200 - 0.0015
+I, [2015-08-07T11:29:07.167672 #60717]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:29:07 -0700
+I, [2015-08-07T11:29:07.167800 #60717]  INFO -- : Parameters: {}
+I, [2015-08-07T11:29:07.168807 #60717]  INFO -- : (0.000528s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:29:07 -0700] "GET / HTTP/1.1" 200 - 0.0014
+I, [2015-08-07T11:30:05.532195 #60717]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:30:05 -0700
+I, [2015-08-07T11:30:05.532304 #60717]  INFO -- : Parameters: {}
+I, [2015-08-07T11:30:05.533412 #60717]  INFO -- : (0.000612s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:30:05 -0700] "GET / HTTP/1.1" 200 - 0.0015
+I, [2015-08-07T11:30:14.107137 #60799]  INFO -- : (0.000250s) SET standard_conforming_strings = ON
+I, [2015-08-07T11:30:14.107295 #60799]  INFO -- : (0.000088s) SET client_min_messages = 'WARNING'
+I, [2015-08-07T11:30:14.107456 #60799]  INFO -- : (0.000128s) SET DateStyle = 'ISO'
+I, [2015-08-07T11:30:14.110501 #60799]  INFO -- : (0.002470s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"posts"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2015-08-07T11:30:17.013046 #60799]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:30:17 -0700
+I, [2015-08-07T11:30:17.013179 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:30:17.014848 #60799]  INFO -- : (0.000436s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:30:17 -0700] "GET / HTTP/1.1" 200 - 0.0022
+I, [2015-08-07T11:30:17.638906 #60799]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:30:17 -0700
+I, [2015-08-07T11:30:17.639060 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:30:17.640846 #60799]  INFO -- : (0.001099s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:30:17 -0700] "GET / HTTP/1.1" 200 - 0.0024
+I, [2015-08-07T11:30:30.358337 #60799]  INFO -- : Started GET "/retrieve_test_json" for 127.0.0.1 at 2015-08-07 11:30:30 -0700
+I, [2015-08-07T11:30:30.358498 #60799]  INFO -- : Parameters: {}
+127.0.0.1 - - [07/Aug/2015:11:30:30 -0700] "GET /retrieve_test_json HTTP/1.1" 401 - 0.0008
+I, [2015-08-07T11:31:09.221769 #60799]  INFO -- : Started GET "/retrieve_test_json$test-token" for 127.0.0.1 at 2015-08-07 11:31:09 -0700
+I, [2015-08-07T11:31:09.221871 #60799]  INFO -- : Parameters: {}
+127.0.0.1 - - [07/Aug/2015:11:31:09 -0700] "GET /retrieve_test_json$test-token HTTP/1.1" 404 - 0.0005
+I, [2015-08-07T11:31:13.306199 #60799]  INFO -- : Started GET "/retrieve_test_json" for 127.0.0.1 at 2015-08-07 11:31:13 -0700
+I, [2015-08-07T11:31:13.306401 #60799]  INFO -- : Parameters: {"test-token"=>nil}
+127.0.0.1 - - [07/Aug/2015:11:31:13 -0700] "GET /retrieve_test_json?test-token HTTP/1.1" 401 - 0.0007
+I, [2015-08-07T11:31:22.521259 #60799]  INFO -- : Started GET "/retrieve_test_json&test-token" for 127.0.0.1 at 2015-08-07 11:31:22 -0700
+I, [2015-08-07T11:31:22.521373 #60799]  INFO -- : Parameters: {}
+127.0.0.1 - - [07/Aug/2015:11:31:22 -0700] "GET /retrieve_test_json&test-token HTTP/1.1" 404 - 0.0004
+I, [2015-08-07T11:31:27.314406 #60799]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:31:27 -0700
+I, [2015-08-07T11:31:27.314512 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:31:27.315682 #60799]  INFO -- : (0.000588s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:31:27 -0700] "GET / HTTP/1.1" 200 - 0.0016
+I, [2015-08-07T11:31:51.197501 #60799]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:31:51 -0700
+I, [2015-08-07T11:31:51.197597 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:31:51.198249 #60799]  INFO -- : (0.000220s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:31:51 -0700] "GET / HTTP/1.1" 200 - 0.0009
+I, [2015-08-07T11:31:52.077898 #60799]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:31:52 -0700
+I, [2015-08-07T11:31:52.078006 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:31:52.079233 #60799]  INFO -- : (0.000719s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:31:52 -0700] "GET / HTTP/1.1" 200 - 0.0017
+I, [2015-08-07T11:31:52.752986 #60799]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:31:52 -0700
+I, [2015-08-07T11:31:52.753103 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:31:52.754103 #60799]  INFO -- : (0.000526s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:31:52 -0700] "GET / HTTP/1.1" 200 - 0.0014
+I, [2015-08-07T11:32:10.781006 #60799]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:32:10 -0700
+I, [2015-08-07T11:32:10.781109 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:32:10.782240 #60799]  INFO -- : (0.000609s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:32:10 -0700] "GET / HTTP/1.1" 200 - 0.0015
+I, [2015-08-07T11:32:13.412277 #60799]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:32:13 -0700
+I, [2015-08-07T11:32:13.412390 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:32:58.746303 #60799]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:32:58 -0700
+I, [2015-08-07T11:32:58.746424 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:32:58.747455 #60799]  INFO -- : (0.000542s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:32:58 -0700] "GET / HTTP/1.1" 200 - 0.0014
+I, [2015-08-07T11:32:59.827292 #60799]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:32:59 -0700
+I, [2015-08-07T11:32:59.827396 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:34:14.506593 #60799]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:34:14 -0700
+I, [2015-08-07T11:34:14.506694 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:34:15.181340 #60799]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:34:15 -0700
+I, [2015-08-07T11:34:15.181448 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:34:16.869282 #60799]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:34:16 -0700
+I, [2015-08-07T11:34:16.869395 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:34:16.870274 #60799]  INFO -- : (0.000363s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:34:16 -0700] "GET / HTTP/1.1" 200 - 0.0013
+I, [2015-08-07T11:34:17.747889 #60799]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:34:17 -0700
+I, [2015-08-07T11:34:17.748063 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:34:41.556728 #60799]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:34:41 -0700
+I, [2015-08-07T11:34:41.556944 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:35:03.791693 #60799]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:35:03 -0700
+I, [2015-08-07T11:35:03.791806 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:35:03.792934 #60799]  INFO -- : (0.000616s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:35:03 -0700] "GET / HTTP/1.1" 200 - 0.0015
+I, [2015-08-07T11:35:04.834168 #60799]  INFO -- : Started GET "/retrieve_test_json" for 127.0.0.1 at 2015-08-07 11:35:04 -0700
+I, [2015-08-07T11:35:04.834394 #60799]  INFO -- : Parameters: {}
+127.0.0.1 - - [07/Aug/2015:11:35:04 -0700] "GET /retrieve_test_json HTTP/1.1" 401 - 0.0007
+I, [2015-08-07T11:35:17.057320 #60799]  INFO -- : Started GET "/retrieve_test_json" for 127.0.0.1 at 2015-08-07 11:35:17 -0700
+I, [2015-08-07T11:35:17.057430 #60799]  INFO -- : Parameters: {}
+127.0.0.1 - - [07/Aug/2015:11:35:17 -0700] "GET /retrieve_test_json HTTP/1.1" 401 - 0.0006
+I, [2015-08-07T11:35:18.794661 #60799]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:35:18 -0700
+I, [2015-08-07T11:35:18.794824 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:35:18.795785 #60799]  INFO -- : (0.000369s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:35:18 -0700] "GET / HTTP/1.1" 200 - 0.0015
+I, [2015-08-07T11:35:20.432676 #60799]  INFO -- : Started GET "/retrieve_test_json" for 127.0.0.1 at 2015-08-07 11:35:20 -0700
+I, [2015-08-07T11:35:20.432802 #60799]  INFO -- : Parameters: {}
+127.0.0.1 - - [07/Aug/2015:11:35:20 -0700] "GET /retrieve_test_json HTTP/1.1" 401 - 0.0004
+I, [2015-08-07T11:36:07.612093 #60799]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:36:07 -0700
+I, [2015-08-07T11:36:07.612195 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:36:07.613222 #60799]  INFO -- : (0.000531s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:36:07 -0700] "GET / HTTP/1.1" 200 - 0.0014
+I, [2015-08-07T11:36:08.524130 #60799]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:36:08 -0700
+I, [2015-08-07T11:36:08.524240 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:36:16.860584 #60799]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:36:16 -0700
+I, [2015-08-07T11:36:16.860722 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:36:16.861480 #60799]  INFO -- : (0.000226s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:36:16 -0700] "GET / HTTP/1.1" 200 - 0.0012
+I, [2015-08-07T11:36:17.458676 #60799]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:36:17 -0700
+I, [2015-08-07T11:36:17.458827 #60799]  INFO -- : Parameters: {}
+I, [2015-08-07T11:36:24.345103 #60872]  INFO -- : (0.000265s) SET standard_conforming_strings = ON
+I, [2015-08-07T11:36:24.345322 #60872]  INFO -- : (0.000138s) SET client_min_messages = 'WARNING'
+I, [2015-08-07T11:36:24.345528 #60872]  INFO -- : (0.000160s) SET DateStyle = 'ISO'
+I, [2015-08-07T11:36:24.348581 #60872]  INFO -- : (0.002468s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"posts"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2015-08-07T11:36:30.683012 #60872]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:36:30 -0700
+I, [2015-08-07T11:36:30.683129 #60872]  INFO -- : Parameters: {}
+I, [2015-08-07T11:36:30.684340 #60872]  INFO -- : (0.000371s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:36:30 -0700] "GET / HTTP/1.1" 200 - 0.0016
+I, [2015-08-07T11:36:31.466712 #60872]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:36:31 -0700
+I, [2015-08-07T11:36:31.466832 #60872]  INFO -- : Parameters: {}
+I, [2015-08-07T11:36:38.781104 #60872]  INFO -- : (0.000333s) SELECT * FROM "posts" LIMIT 1
+I, [2015-08-07T11:36:42.290374 #60872]  INFO -- : (0.000319s) SELECT * FROM "posts" LIMIT 1
+I, [2015-08-07T11:37:59.643149 #60872]  INFO -- : (0.000268s) SELECT * FROM "posts" LIMIT 1
+I, [2015-08-07T11:38:10.023743 #60872]  INFO -- : (0.000400s) SELECT * FROM "posts"
+I, [2015-08-07T11:39:21.853234 #60996]  INFO -- : (0.000218s) SET standard_conforming_strings = ON
+I, [2015-08-07T11:39:21.853452 #60996]  INFO -- : (0.000147s) SET client_min_messages = 'WARNING'
+I, [2015-08-07T11:39:21.853632 #60996]  INFO -- : (0.000147s) SET DateStyle = 'ISO'
+I, [2015-08-07T11:39:21.856471 #60996]  INFO -- : (0.002333s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"posts"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2015-08-07T11:39:25.674772 #60996]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:39:25 -0700
+I, [2015-08-07T11:39:25.674886 #60996]  INFO -- : Parameters: {}
+I, [2015-08-07T11:39:25.675897 #60996]  INFO -- : (0.000456s) SELECT * FROM "posts" LIMIT 1
+127.0.0.1 - - [07/Aug/2015:11:39:25 -0700] "GET /retrieve HTTP/1.1" 200 - 0.0014
+I, [2015-08-07T11:39:35.816937 #60996]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:39:35 -0700
+I, [2015-08-07T11:39:35.817091 #60996]  INFO -- : Parameters: {}
+I, [2015-08-07T11:39:35.817875 #60996]  INFO -- : (0.000405s) SELECT * FROM "posts" LIMIT 1
+127.0.0.1 - - [07/Aug/2015:11:39:35 -0700] "GET /retrieve HTTP/1.1" 200 - 0.0013
+I, [2015-08-07T11:39:36.787924 #60996]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:39:36 -0700
+I, [2015-08-07T11:39:36.788045 #60996]  INFO -- : Parameters: {}
+I, [2015-08-07T11:39:36.788586 #60996]  INFO -- : (0.000292s) SELECT * FROM "posts" LIMIT 1
+127.0.0.1 - - [07/Aug/2015:11:39:36 -0700] "GET /retrieve HTTP/1.1" 200 - 0.0010
+I, [2015-08-07T11:39:41.415297 #61025]  INFO -- : (0.000233s) SET standard_conforming_strings = ON
+I, [2015-08-07T11:39:41.415498 #61025]  INFO -- : (0.000130s) SET client_min_messages = 'WARNING'
+I, [2015-08-07T11:39:41.415620 #61025]  INFO -- : (0.000088s) SET DateStyle = 'ISO'
+I, [2015-08-07T11:39:41.418555 #61025]  INFO -- : (0.002396s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"posts"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2015-08-07T11:39:42.598181 #61025]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:39:42 -0700
+I, [2015-08-07T11:39:42.598294 #61025]  INFO -- : Parameters: {}
+I, [2015-08-07T11:39:42.599283 #61025]  INFO -- : (0.000401s) SELECT * FROM "posts" LIMIT 1
+127.0.0.1 - - [07/Aug/2015:11:39:42 -0700] "GET /retrieve HTTP/1.1" 200 - 0.0014
+I, [2015-08-07T11:41:00.393474 #61060]  INFO -- : (0.000236s) SET standard_conforming_strings = ON
+I, [2015-08-07T11:41:00.393624 #61060]  INFO -- : (0.000086s) SET client_min_messages = 'WARNING'
+I, [2015-08-07T11:41:00.393833 #61060]  INFO -- : (0.000164s) SET DateStyle = 'ISO'
+I, [2015-08-07T11:41:00.396947 #61060]  INFO -- : (0.002552s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"posts"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2015-08-07T11:41:01.857557 #61060]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:41:01 -0700
+I, [2015-08-07T11:41:01.857674 #61060]  INFO -- : Parameters: {}
+I, [2015-08-07T11:41:01.858558 #61060]  INFO -- : (0.000351s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:41:01 -0700] "GET /retrieve HTTP/1.1" 200 - 0.0013
+I, [2015-08-07T11:42:18.609489 #61095]  INFO -- : (0.000227s) SET standard_conforming_strings = ON
+I, [2015-08-07T11:42:18.609628 #61095]  INFO -- : (0.000073s) SET client_min_messages = 'WARNING'
+I, [2015-08-07T11:42:18.609740 #61095]  INFO -- : (0.000083s) SET DateStyle = 'ISO'
+I, [2015-08-07T11:42:18.612894 #61095]  INFO -- : (0.002632s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"posts"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2015-08-07T11:43:20.514161 #61095]  INFO -- : Started GET "/retrieve_test_json" for 127.0.0.1 at 2015-08-07 11:43:20 -0700
+I, [2015-08-07T11:43:20.514277 #61095]  INFO -- : Parameters: {}
+127.0.0.1 - - [07/Aug/2015:11:43:20 -0700] "GET /retrieve_test_json HTTP/1.1" 200 - 0.0010
+I, [2015-08-07T11:44:51.493652 #61095]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:44:51 -0700
+I, [2015-08-07T11:44:51.493759 #61095]  INFO -- : Parameters: {}
+I, [2015-08-07T11:44:51.494420 #61095]  INFO -- : (0.000353s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:44:51 -0700] "GET /retrieve HTTP/1.1" 200 - 0.0010
+I, [2015-08-07T11:45:00.761140 #61147]  INFO -- : (0.000229s) SET standard_conforming_strings = ON
+I, [2015-08-07T11:45:00.761289 #61147]  INFO -- : (0.000082s) SET client_min_messages = 'WARNING'
+I, [2015-08-07T11:45:00.761517 #61147]  INFO -- : (0.000193s) SET DateStyle = 'ISO'
+I, [2015-08-07T11:45:00.764617 #61147]  INFO -- : (0.002564s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"posts"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2015-08-07T11:45:05.303457 #61147]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:45:05 -0700
+I, [2015-08-07T11:45:05.303564 #61147]  INFO -- : Parameters: {}
+I, [2015-08-07T11:45:05.304430 #61147]  INFO -- : (0.000341s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:45:05 -0700] "GET /retrieve HTTP/1.1" 200 - 0.0013
+I, [2015-08-07T11:45:57.825541 #61147]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:45:57 -0700
+I, [2015-08-07T11:45:57.825754 #61147]  INFO -- : Parameters: {}
+I, [2015-08-07T11:45:57.826528 #61147]  INFO -- : (0.000400s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:45:57 -0700] "GET /retrieve HTTP/1.1" 200 - 0.0013
+I, [2015-08-07T11:46:04.501749 #61193]  INFO -- : (0.000215s) SET standard_conforming_strings = ON
+I, [2015-08-07T11:46:04.501980 #61193]  INFO -- : (0.000164s) SET client_min_messages = 'WARNING'
+I, [2015-08-07T11:46:04.502136 #61193]  INFO -- : (0.000116s) SET DateStyle = 'ISO'
+I, [2015-08-07T11:46:04.505146 #61193]  INFO -- : (0.002485s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"posts"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2015-08-07T11:46:11.759240 #61193]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:46:11 -0700
+I, [2015-08-07T11:46:11.759340 #61193]  INFO -- : Parameters: {}
+I, [2015-08-07T11:46:11.760229 #61193]  INFO -- : (0.000374s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:46:11 -0700] "GET /retrieve HTTP/1.1" 401 - 0.0013
+I, [2015-08-07T11:46:32.964014 #61193]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:46:32 -0700
+I, [2015-08-07T11:46:32.964141 #61193]  INFO -- : Parameters: {}
+I, [2015-08-07T11:46:32.964635 #61193]  INFO -- : (0.000270s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:46:32 -0700] "GET /retrieve HTTP/1.1" 200 - 0.0011
+I, [2015-08-07T11:46:59.320217 #61193]  INFO -- : Started GET "/posts/new" for 127.0.0.1 at 2015-08-07 11:46:59 -0700
+I, [2015-08-07T11:46:59.320429 #61193]  INFO -- : Parameters: {}
+127.0.0.1 - - [07/Aug/2015:11:46:59 -0700] "GET /posts/new HTTP/1.1" 200 - 0.0011
+I, [2015-08-07T11:47:02.998966 #61193]  INFO -- : Started POST "/posts/create" for 127.0.0.1 at 2015-08-07 11:47:02 -0700
+I, [2015-08-07T11:47:03.000698 #61193]  INFO -- : Parameters: {"post_name"=>"New post"}
+I, [2015-08-07T11:47:03.001715 #61193]  INFO -- : (0.000175s) BEGIN
+I, [2015-08-07T11:47:03.002399 #61193]  INFO -- : (0.000370s) INSERT INTO "posts" ("name") VALUES ('New post') RETURNING *
+I, [2015-08-07T11:47:03.009001 #61193]  INFO -- : (0.006445s) COMMIT
+127.0.0.1 - - [07/Aug/2015:11:47:03 -0700] "POST /posts/create HTTP/1.1" 302 - 0.0105
+I, [2015-08-07T11:47:03.012559 #61193]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:47:03 -0700
+I, [2015-08-07T11:47:03.012706 #61193]  INFO -- : Parameters: {}
+I, [2015-08-07T11:47:03.013618 #61193]  INFO -- : (0.000211s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:47:03 -0700] "GET / HTTP/1.1" 200 - 0.0013
+I, [2015-08-07T11:47:06.697781 #61193]  INFO -- : Started GET "/retrieve" for 127.0.0.1 at 2015-08-07 11:47:06 -0700
+I, [2015-08-07T11:47:06.697960 #61193]  INFO -- : Parameters: {}
+I, [2015-08-07T11:47:06.698744 #61193]  INFO -- : (0.000438s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:47:06 -0700] "GET /retrieve HTTP/1.1" 200 - 0.0017
+I, [2015-08-07T11:48:24.722997 #61193]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:48:24 -0700
+I, [2015-08-07T11:48:24.723118 #61193]  INFO -- : Parameters: {}
+I, [2015-08-07T11:48:24.724354 #61193]  INFO -- : (0.000574s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:48:24 -0700] "GET / HTTP/1.1" 200 - 0.0017
+I, [2015-08-07T11:48:36.301896 #61193]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:48:36 -0700
+I, [2015-08-07T11:48:36.301998 #61193]  INFO -- : Parameters: {}
+I, [2015-08-07T11:48:36.303093 #61193]  INFO -- : (0.000607s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:48:36 -0700] "GET / HTTP/1.1" 200 - 0.0015
+I, [2015-08-07T11:48:48.082068 #61193]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:48:48 -0700
+I, [2015-08-07T11:48:48.082171 #61193]  INFO -- : Parameters: {}
+I, [2015-08-07T11:48:48.083193 #61193]  INFO -- : (0.000538s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:48:48 -0700] "GET / HTTP/1.1" 200 - 0.0014
+I, [2015-08-07T11:48:55.441483 #61193]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-08-07 11:48:55 -0700
+I, [2015-08-07T11:48:55.441583 #61193]  INFO -- : Parameters: {}
+I, [2015-08-07T11:48:55.442635 #61193]  INFO -- : (0.000555s) SELECT * FROM "posts"
+127.0.0.1 - - [07/Aug/2015:11:48:55 -0700] "GET / HTTP/1.1" 200 - 0.0014
