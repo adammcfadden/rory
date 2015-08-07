@@ -24,7 +24,7 @@ class ApiController < Rory::Controller
     @response = [401, {"Content-type" => "application/json"}, [json_error('Must provide API token')]]
     # recuse ApiTokenMismatch if it was raised from check_api_token
   rescue ApiTokenMismatch
-    @responce = [403, {"Content-type" => "application/json"}, [json_error('Invalid API token')]]
+    @response = [403, {"Content-type" => "application/json"}, [json_error('Invalid API token')]]
   end
 
   def check_api_token

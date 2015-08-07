@@ -1,3 +1,5 @@
+ENV['RORY_STAGE'] ||= ENV['RACK_ENV'] || 'development'
+
 # define app_root so that it can be used in mapping
 app_root = File.dirname(__FILE__)
 require File.join(File.dirname(__FILE__), 'config', 'application')

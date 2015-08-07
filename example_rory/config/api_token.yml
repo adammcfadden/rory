@@ -1,3 +1,21 @@
 default: &default
   # Add api token here
   token: '020299-3240923-12e30fedf-324edf'
+  
+test:
+  <<: *default
+
+development:
+  <<: *default
+
+alpha:
+  <<: *default
+
+qa:
+  <<: *default
+
+beta:
+  <<: *default
+
+production:
+  <<: *default

@@ -4,6 +4,6 @@ gem 'rory'
 gem 'thin'
 gem 'sequel'
 
-group :developtment, :test do
+group :development, :test do
   gem 'rake'
 end
