@@ -3,5 +3,10 @@
 <h1>Example Header</h1>
 
 <p>
-  look more content!
-</p>
+Check out all the posts</p>
+
+<ul>
+  <% Post.all.each do |post| %>
+  <li><%= post.name %></li>
+  <% end %>
+</ul>

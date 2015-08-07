@@ -1,5 +1,9 @@
 ExampleApp::Application.set_routes do
   match '/', to: 'post#index', methods: [:get]
+  match '/retrieve', to: 'post#retrieve', methods: [:get]
+  match '/retrieve_test_json', to: 'post#retrieve_test_json', methods: [:get]
+  match '/posts/new', to: 'post#new', methods: [:get]
+  match '/posts/create', to: 'post#create', methods: [:post]
 
   # match initializes an instance of the Route class.
   # this will set the controller and the action for that route

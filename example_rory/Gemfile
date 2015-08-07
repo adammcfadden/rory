@@ -10,4 +10,5 @@ gem 'database_operations', :git => 'git@github.com:projectdx/database_operations
 group :development, :test do
   gem 'rake'
   gem 'byebug'
+  gem 'pry'
 end
