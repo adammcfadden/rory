@@ -1,4 +1,10 @@
 require 'rory'
+require 'bundler'
+require 'sequel'
+
+
+Bundler.require(ENV['RORY_ENV'])
+
 
 # replace ExampleApp with desired App name
 
@@ -9,6 +15,16 @@ module ExampleApp
 end
 
 ExampleApp::Application.root = File.expand_path(File.join('..', '..'), __FILE__)
+ExampleApp::Application.spin_up
+
+DB = ExampleApp::Application.db
+
+Sequel.extension :migration
+Sequel.extension(:core_extensions)
+Sequel::Model.db.extension(:pagination)
+Sequel::Model.plugin :timestamps, :update_on_create => true
+
+# require_all_files must come after spin_up
 ExampleApp::Application.require_all_files
 
 # view Rory::Application source code at /lib/rory/application.rb

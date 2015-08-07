@@ -1,0 +1,11 @@
+default: &default
+  adapter: postgres
+  host: localhost
+
+development:
+  <<: *default
+  database: rory_dev
+
+test:
+  <<: *default
+  database: rory_test

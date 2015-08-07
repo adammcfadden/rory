@@ -1,0 +1,13 @@
+ENV['RORY_STAGE'] ||= ENV['RACK_ENV'] || 'development'
+
+require 'bundler/setup'
+require 'rory/tasks'
+
+Dir[File.join(File.dirname(__FILE__), 'tasks', '*.rake')].each do |path|
+  load path
+end
+
+task :environment do
+  require_relative 'config/application'
+  RORY_APP = ExampleApp::Application
+end

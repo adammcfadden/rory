@@ -1,0 +1,12 @@
+default: &default
+  adapter: postgres
+  host: localhost
+  max_connections: 10
+
+development:
+  <<: *default
+  database: rory_dev
+
+test:
+  <<: *default
+  database: rory_test
